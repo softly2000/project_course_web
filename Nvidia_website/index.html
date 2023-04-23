@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Это набор инструкций для браузера, который помогает правильно отображать веб-страницу. В первой строке указывается кодировка текста, чтобы браузер мог правильно понимать русские символы. Во второй строке указывается, что страница совместима со всеми версиями браузера Internet Explorer. В третьей строке указывается, как должна масштабироваться страница на устройствах с разными размерами экрана. -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Это набор ссылок на файлы, которые необходимы для отображения и стилизации веб-страницы. Первая ссылка указывает на иконку сайта, которая отображается во вкладке браузера. Вторая ссылка загружает стили и значки из библиотеки Boxicons. Третья и четвертая ссылки загружают файлы со стилями для библиотеки Swiper и основного файла стилей соответственно. -->
+    <title>Nvidia</title>
+    <!-- Это тег, который задает название страницы. В данном случае, название страницы - "Nvidia". Оно отображается в верхней части окна браузера и является одним из способов идентификации веб-страницы пользователем. -->
+</head>
+<body>
+
+<!--  Header  -->
+<header id="header" class="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo"><img src="images/logo.png" class="nav__logo-img" />Nvidia</a>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#trick" class="nav__link">Commpon</a></li>
+                <li class="nav__item"><a href="#new" class="nav__link">New</a></li>
+                <a href="#" class="button button--ghost">suppot</a>
+            </ul>
+            <div id="nav-close" class="nav__close"><i class="bx bx-x"></i></div>
+            <img src="images/nav-img.png" alt="" class="nav__img" />
+        </div>
+        <div class="nav__toggle" id="nav-toggle"><i class="bx bx-grid-alt"></i></div>
+    </nav>
+</header>
+<!--
+<main class="main">
+-->
+    <section class="home container" id="home">
+    <div class="swiper home-swiper">
+    <div class="swiper-wrapper">
+        <section class="swiper-slide">
+            <div class="home__content grid">
+                <div class="home__group">
+                    <img src="images/category2-img.png" alt="" class="home__img"/>
+                    <div class="home__indicator"></div>
+                    <div class="home__details-img">
+                        <h4 class="home__details-title">Nvidia rize</h4>
+                        <span class="home__details-subtitle"></span>
+                    </div>
+                </div>
+
+                <div class="home__data">
+                    <h3 class="home__subtitle">#1 Top</h3>
+                    <h1 class="home__title">Nvidia GeForce RTX 3080</h1>
+                    <p class="home__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.Corporis 
+                      quidem totam sapiente adipisci necessitatibus ullamhi</p>
+                    <div class="home__buttons">
+                        <a href="#" class="button">Buy now</a>
+                        <a href="#" class="button--link button--flex">
+                          Track Record<i class="bx bx-right-arrow-alt button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <section class="swiper-slide">
+            <div class="home__content grid">
+                <div class="home__group">
+                    <img src="images/home2-img.png" alt="" class="home__img" />
+                    <div class="home__indicator"></div>
+                    <div class="home__details-img">
+                        <h4 class="home__details-title">Adino & Grahami</h4>
+                        <span class="home__details-subtitle">No words can describe them</span>
+                    </div>
+                </div>
+                    <div class="home__data">
+                        <h3 class="home__subtitle">#2 Top</h3>
+                        <h1 class="home__title">AMD Radeon RX 6800 XT</h1>
+                        <p class="home__description">Lorem ipsum dolor sit amet consectetur, adipisicing 
+                          elit.Corporis quidem totam sapiente adipisci necessitatibus ullamhi</p>
+                    <div class="home__buttons">
+                        <a href="#" class="button">Buy now</a>
+                        <a href="#" class="button--link button--flex">Track Record<i class="bx bx-right-arrow-alt button__icon"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+          <section class="swiper-slide">
+            <div class="home__content grid">
+                <div class="home__group">
+                    <img src="images/home3-img.png" alt="" class="home__img" />
+                    <div class="home__indicator"></div>
+                    <div class="home__details-img">
+                        <h4 class="home__details-title">Captain Sem</h4>
+                        <span class="home__details-subtitle">Veteran Spooky Ghost</span>
+                    </div>
+                </div>
+                <div class="home__data">
+                  <h3 class="home__subtitle">#3 Top </h3>
+                  <h1 class="home__title">
+                    Nvidia GeForce GTX 1660 Super
+                  </h1>
+                  <p class="home__description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  </p>
+                  <div class="home__buttons">
+                    <a href="#" class="button">Buy now</a>
+                    <a href="#" class="button--link button--flex"
+                      >Track Record
+                      <i class="bx bx-right-arrow-alt button__icon"></i
+                    ></a>
+                  </div>
+                </div>
+            </div>
+          </section>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="section category">
+        <h2 class="section__title">
+          Favorite Scare <br />
+          Category
+        </h2>
+        <div class="category__container container grid">
+          <div class="category__data">
+            <img src="images/category1-img.png" alt="" class="category__img" />
+            <h3 class="category__title">Ghosts</h3>
+            <p class="category__description">
+              Choose the ghosts, the scariest there are.
+            </p>
+          </div>
+          <div class="category__data">
+            <img src="images/home1-img.png" alt="" class="category__img" />
+            <h3 class="category__title">Pumpkins</h3>
+            <p class="category__description">
+              You look at the scariest pumpkins there is.
+            </p>
+          </div>
+          <div class="category__data">
+            <img src="images/category3-img.png" alt="" class="category__img" />
+            <h3 class="category__title">Witch Hat</h3>
+            <p class="category__description">
+              Pick the most stylish witch hats out there.
+            </p>
+          </div>
+        </div>
+      </section>
+     
+      <section class="section about" id="about">
+        <div class="about__container container grid">
+          <div class="about__data">
+            <h2 class="section__title about__title">
+              About Nvidia <br />
+            </h2>
+            <p class="about__description">
+              Nvidia is an American technology company that specializes in 
+              the design and manufacturing of graphics processing units (GPU), 
+              system-on-chip (SoC) units, and other computing devices.<br/>
+               was founded in California in 1993 and is currently one 
+              the largest GPU manufacturers in the world.
+            </p>
+            <a href="#" class="button">Know more</a>
+          </div>
+          <img src="images/trick-treat6-img.png" alt="" class="about__img" />
+        </div>
+      </section>
+      
+      <section class="section trick" id="trick">
+        <h2 class="section__title">Trick Or Treat</h2>
+
+        <div class="trick__container container grid">
+          <div class="trick__content">
+            <img src="images/trick-treat1-img.png" alt="" class="trick__img" />
+            <h3 class="trick__title">Titan RTX</h3>
+            <span class="trick__subtitle">dert</span>
+            <span class="trick__price">$191.99</span>
+            <button class="button trick__button">
+              <i class="bx bx-cart-alt trick__icon"></i>
+            </button>
+          </div>
+          
+          <div class="trick__content">
+            <img src="images/trick-treat2-img.png" alt="" class="trick__img" />
+            <h3 class="trick__title"> Radeon RX</h3>
+            <span class="trick__subtitle">ettyy</span>
+            <span class="trick__price">$9.99</span>
+            <button class="button trick__button">
+              <i class="bx bx-cart-alt trick__icon"></i>
+            </button>
+          </div>
+
+          <div class="trick__content">
+            <img src="images/trick-treat3-img.png" alt="" class="trick__img" />
+            <h3 class="trick__title">GeForce RTX</h3>
+            <span class="trick__subtitle">Accessory</span>
+            <span class="trick__price">$195.99</span>
+            <button class="button trick__button">
+              <i class="bx bx-cart-alt trick__icon"></i>
+            </button>
+          </div>
+
+          <div class="trick__content">
+            <img src="images/trick-treat4-img.png" alt="" class="trick__img" />
+            <h3 class="trick__title">Radeon RX</h3>
+            <span class="trick__subtitle">andy</span>
+            <span class="trick__price">$7.99</span>
+            <button class="button trick__button">
+              <i class="bx bx-cart-alt trick__icon"></i>
+            </button>
+          </div>
+
+          <div class="trick__content">
+            <img src="images/trick-treat5-img.png" alt="" class="trick__img" />
+            <h3 class="trick__title">GeForce GT</h3>
+            <span class="trick__subtitle">kert main</span>
+            <span class="trick__price">$190.99</span>
+            <button class="button trick__button">
+              <i class="bx bx-cart-alt trick__icon"></i>
+            </button>
+          </div>
+
+          <div class="trick__content">
+            <img src="images/trick-treat6-img.png" alt="" class="trick__img" />
+            <h3 class="trick__title">1050 Ti</h3>
+            <span class="trick__subtitle">Acces</span>
+            <span class="trick__price">$107.99</span>
+            <button class="button trick__button">
+              <i class="bx bx-cart-alt trick__icon"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section discount">
+        <div class="discount__container container grid">
+          <div class="discount__data">
+            <h2 class="discount__title">
+              50% Discount <br />
+              On New Products
+            </h2>
+            <a href="#" class="button">Go to new</a>
+          </div>
+
+          <img src="images/discount-img.png" alt="" class="discount__img" />
+        </div>
+      </section>
+    
+      <section class="section new" id="new">
+        <h2 class="section__title">Nvidia Titan RTX</h2>
+
+        <div class="new__container container">
+          <div class="swiper new-swiper">
+            <div class="swiper-wrapper">
+              <div class="new__content swiper-slide">
+                <div class="new__tag">Новый</div>
+                <img src="images/new1-img.png" alt="" class="new__img" />
+                <h3 class="new__title">AMD Radeon</h3>
+                <span class="new__subtitle">Accessory</span>
+
+                <div class="new__prices">
+                  <span class="new__price">$84.99</span>
+                  <span class="new__discount">$89.99</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__icon"></i>
+                </button>
+              </div>
+              
+              <div class="new__content swiper-slide">
+                <div class="new__tag">Новый</div>
+                <img src="images/new2-img.png" alt="" class="new__img" />
+                <h3 class="new__title">Nvidia Titan</h3>
+                <span class="new__subtitle">Acces</span>
+
+                <div class="new__prices">
+                  <span class="new__price">$19.99</span>
+                  <span class="new__discount">$89.99</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__icon"></i>
+                </button>
+              </div>
+
+              <div class="new__content swiper-slide">
+                <div class="new__tag">Новый</div>
+                <img src="images/new3-img.png" alt="" class="new__img" />
+                <h3 class="new__title"> Radeon RX</h3>
+                <span class="new__subtitle">Acces</span>
+
+                <div class="new__prices">
+                  <span class="new__price">$42.99</span>
+                  <span class="new__discount">$92.99</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__icon"></i>
+                </button>
+              </div>
+
+              <div class="new__content swiper-slide">
+                <div class="new__tag">Новый</div>
+                <img src="images/new4-img.png" alt="" class="new__img" />
+                <h3 class="new__title"> Quadro RTX</h3>
+                <span class="new__subtitle">Acces</span>
+
+                <div class="new__prices">
+                  <span class="new__price">$44.99</span>
+                  <span class="new__discount">$64.99</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__icon"></i>
+                </button>
+              </div>
+
+              <div class="new__content swiper-slide">
+                <div class="new__tag">Новый</div>
+                <img src="images/new5-img.png" alt="" class="new__img" />
+                <h3 class="new__title">Radeon R9</h3>
+                <span class="new__subtitle">Accessory</span>
+
+                <div class="new__prices">
+                  <span class="new__price">$9.99</span>
+                  <span class="new__discount">$22.99</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__icon"></i>
+                </button>
+              </div>
+
+              <div class="new__content swiper-slide">
+                <div class="new__tag">Новый</div>
+                <img src="images/new6-img.png" alt="" class="new__img" />
+                <h3 class="new__title">Witch Broom</h3>
+                <span class="new__subtitle">Acces</span>
+
+                <div class="new__prices">
+                  <span class="new__price">$9.99</span>
+                  <span class="new__discount">$99.99</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section newsletter">
+        <div class="newsletter__container container">
+          <h2 class="section__title">Acer Swiftr</h2>
+          <p class="newsletter__description">
+            Asus Chromebook Flip C434. Directly to your inbox
+          </p>
+
+          <form action="" class="newsletter__form">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              class="newsletter__input"
+            />
+            <button class="button">Subscribe</button>
+          </form>
+        </div>
+      </section>
+     
+    </main>
+
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div class="footer__content">
+          <a href="#" class="footer__logo">
+            <img src="images/logo.png" alt="" class="footer__logo-img" />
+            Nvidia
+          </a>
+
+          <p class="footer__description">
+            Enjoy the scariest night <br />
+            of your life.
+          </p>
+
+          <div class="footer__social">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="footer__social-link"
+            >
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="footer__social-link"
+            >
+              <i class="bx bxl-instagram-alt"></i>
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              class="footer__social-link"
+            >
+              <i class="bx bxl-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">About</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Features</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">News</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Our Services</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Discounts</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Shipping mode</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Our Company</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">About us</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Our mision</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="footer__copy">&#169; All rigths reserved</span>
+
+      <img src="images/footer1-img.png" alt="" class="footer__img-one" />
+      <img src="images/footer2-img.png" alt="" class="footer__img-two" />
+    </footer>
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+   
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- отвечает за подключение необходимых JavaScript-библиотек и файлов, которые используются на веб-странице.
+    scrollreveal.min.js - библиотека, которая позволяет создавать анимации при скроллинге страницы.
+    swiper-bundle.min.js - библиотека для создания слайдеров и каруселей на веб-странице.
+    main.js - пользовательский JavaScript-файл, который содержит пользовательские скрипты, необходимые для работы веб-страницы, например, обработчики событий, AJAX-запросы и другие скрипты. -->
+  </body>
+</html>

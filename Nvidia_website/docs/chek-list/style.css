@@ -1,0 +1,175 @@
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    color: #22242e;
+  }
+  
+  header {
+    background-color: #22242e;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #fff;
+    font-size: 32px;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  label[for="comments"] {
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 5px;
+  }
+  
+  label[for="attachment"] {
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #22242e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  
+  .upload-btn {
+    margin-left: 290px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .upload-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  .upload-btn::after {
+    content: 'Выберите файл';
+    display: inline-block;
+  }
+
+.modal {
+  display: none; /* по умолчанию модальное окно скрыто */
+  position: fixed; /* позиционирование элемента фиксированное */
+  z-index: 1; /* задаем z-index для корректного отображения модального окна */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* добавляем скроллбар, если контент модального окна выходит за пределы экрана */
+  background-color: rgba(0, 0, 0, 0.4); /* устанавливаем полупрозрачный цвет фона */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* выравнивание модального окна по центру */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content i {
+  font-size: 48px;
+  color: #39b54a;
+  margin-bottom: 20px;
+}
+.modal-content .fa-check-circle {
+  font-size: 28px;
+  color: #39b54a;
+}
+
+/*
+.fas .fa-check-circle {
+  font-size: 48px;
+  color: #39b54a;
+}*/
+
+/* Стили для анимации появления модального окна */
+.modal-content.fade-in {
+  animation: modalFadeIn 0.5s forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+

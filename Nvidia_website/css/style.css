@@ -1,0 +1,1336 @@
+/*Импорт шрифтов из Font Google*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
+
+/*
+В коде создаются несколько переменных, 
+такие как --header-height, --hue, --first-color и т.д., 
+которые задают различные цвета и размеры для использования в дальнейшем в CSS. 
+Например, --first-color задает цвет в формате HSL (Hue, Saturation, Lightness), 
+а --header-height задает высоту заголовка.
+
+Также в коде устанавливаются цвета градиентов, 
+такие как --body-color и --container-color, 
+которые будут использоваться для заливки фона элементов веб-страницы.
+*/
+:root {
+  --header-height: 3.5rem;
+  --hue: 14;
+  --first-color: hsl(var(--hue), 91%, 54%);
+  --first-color-alt: hsl(var(--hue), 91%, 50%);
+  --title-color: hsl(var(--hue), 4%, 100%);
+  --text-color: hsl(var(--hue), 4%, 85%);
+  --text-color-light: hsl(var(--hue), 4%, 55%);
+
+  --body-color: linear-gradient(
+    90deg,
+    hsl(216, 91%, 68%) 0%,
+    hsl(199, 28%, 40%) 100%
+  );
+  --container-color: linear-gradient(
+    136deg,
+    hsl(208, 28%, 38%) 0%,
+    hsl(202, 28%, 35%) 100%
+  );
+
+  
+  --body-color: linear-gradient(
+    90deg,
+    hsl(212, 6%, 41%) 0%,
+    hsl(198, 12%, 16%) 100%
+  );
+  --container-color: linear-gradient(
+    136deg,
+    hsl(207, 15%, 24%) 0%,
+    hsl(202, 18%, 20%) 100%
+  );
+
+  /*
+Этот код содержит настройки для шрифтов и отступов в веб-странице.
+--body-font: "Poppins", sans-serif; устанавливает шрифт "Poppins", 
+а если он недоступен, то стандартный шрифт sans-serif.
+
+--biggest-font-size: 2rem; устанавливает максимальный размер шрифта в 2 рема.
+ Остальные переменные типа --h1-font-size устанавливают размеры шрифтов для разных заголовков (h1, h2, h3 и т.д.).
+
+--font-medium: 500; 
+--font-semi-bold: 600; 
+--font-black: 900; 
+устанавливают толщину шрифтов в зависимости от требуемой жирности.
+
+--mb-0-25: 0.25rem; 
+--mb-0-5: 0.5rem; 
+--mb-0-75: 0.75rem; 
+--mb-1: 1rem; 
+--mb-1-5: 1.5rem; 
+--mb-2: 2rem; 
+--mb-2-5: 2.5rem; 
+устанавливают отступы элементов в веб-странице в зависимости от требуемого размера.
+
+--z-tooltip: 10; 
+--z-fixed: 100; 
+устанавливают значение параметра "z-index", 
+который определяет порядок слоев в веб-странице.
+  */
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-black: 900;
+
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+/*
+Этот код представляет собой инструкцию для изменения размеров шрифтов при определенных условиях.
+Условием является ширина экрана в пикселях, которая должна быть не менее 992 пикселей.
+Если это условие соблюдается, размеры шрифтов изменяются следующим образом: "biggest-font-size" 
+увеличивается до 4 рем, "h1-font-size" увеличивается до 2.25 рем, "h2-font-size"
+увеличивается до 1.5 рем и так далее.
+*/
+@media screen and (min-width: 992px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*
+В этом коде устанавливаются некоторые значения по умолчанию для HTML страницы.
+
+Сначала, все элементы на странице устанавливаются с свойством "box-sizing: border-box", 
+что означает, что все внутренние отступы и границы включены в ширину и высоту элемента.
+Также устанавливается нулевой отступ и нулевой отступ для всех элементов.
+
+Затем, устанавливается свойство "scroll-behavior: smooth" для HTML, что означает, 
+что прокрутка страницы должна происходить плавно.
+
+Далее, устанавливается несколько стилей для тела (body) страницы. 
+Шрифт устанавливается как "var(--body-font)",
+размер шрифта устанавливается как "var(--normal-font-size)", 
+цвет фона устанавливается как "var(--body-color)" и цвет текста устанавливается как "var(--text-color)".
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  /*background: var(--body-color);*/
+  background-color: #22242e;
+  color: var(--text-color);
+}
+
+/*
+Этот код задает стили для различных HTML элементов, 
+таких как заголовки (h1, h2, h3, h4), 
+списки (ul), ссылки 
+(a), изображения (img),
+ кнопки (button) 
+ и поля ввода (input).
+
+Все элементы будут использовать одинаковый способ отображения рамок
+ (border-box) и отступов (padding: 0, margin: 0).
+Поведение прокрутки страницы в HTML будет гладким (scroll-behavior: smooth).
+Тело (body) страницы будет использовать указанный шрифт (var(--body-font)) 
+и цвет (var(--text-color)). Размер шрифта установлен на значение переменной var(--normal-font-size).
+Заголовки (h1, h2, h3, h4) будут использовать цвет var(--title-color)
+и выделенный шрифт (var(--font-semi-bold)).
+Список (ul) не будет использовать маркеры.
+Ссылки (a) не будут иметь подчеркивания.
+Изображения (img) будут автоматически масштабироваться пропорционально ширине и высоте.
+*/
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+элементов: кнопок (button) и полей ввода (input).
+
+Для кнопок и полей ввода устанавливается, 
+что не должно быть границы (border: none) и не должны быть выделения (outline: none) при нажатии.
+
+Также для кнопок устанавливается вид курсора (cursor: pointer), шрифт (font-family: var(--body-font)) и размер шрифта (font-size: var(--normal-font-size)).
+Это означает, что шрифт кнопок будет браться из глобальной переменной --body-font, 
+а размер шрифта будет браться из глобальной переменной --normal-font-size.
+*/
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+/*
+Класс "section" задает padding (отступ) внутреннего содержимого элемента.
+
+Класс "section__title" задает размер шрифта, отступ снизу, и выравнивание текста по центру.
+
+Класс "container" задает максимальную ширину элемента и отступы слева и справа.
+
+Класс "grid" задает display (отображение) элемента как grid (сетку).
+
+Класс "main" задает overflow (переполнение) элемента как hidden (скрытое).
+*/
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+  text-align: center;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*
+.header - это стиль для блока шапки сайта. 
+Он занимает 100% ширины экрана, имеет фон цвета, 
+указанного в переменной --body-color. Он также устанавливается в позицию 
+"фиксированный" сверху экрана с индексом слоя, указанным в переменной --z-fixed.
+
+.nav - это стиль для блока навигации в шапке сайта.
+ Его высота установлена в значение, указанное в переменной 
+ --header-height, и он выровнен по центру с помощью свойства "flex".
+
+.nav__logo - это стиль для логотипа в навигационном меню. 
+Он выровнен по центру с помощью свойства "flex".
+
+
+.nav__link: этот селектор задает цвет для всех ссылок в навигационной панели.
+.nav__logo: этот селектор задает шрифт и цвет для логотипа.
+.nav__toggle: этот селектор задает размер шрифта и курсор для кнопки, которая открывает и закрывает меню.
+.nav__close: этот селектор задает цвет для кнопки, которая закрывает меню.
+
+*/
+.header {
+  width: 100%;
+  /*background: var(--body-color);*/
+  background-color: #22242e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-weight: var(--font-medium);
+}
+
+.nav__logo-img {
+  width: 1.25rem;
+}
+
+.nav__link,
+.nav__logo,
+.nav__toggle,
+.nav__close {
+  color: var(--title-color);
+}
+
+.nav__toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+/*
+В медиа запросе @media screen and (max-width: 767px)
+ устанавливаются стили для меню, когда размер экрана меньше 767 пикселей.
+.nav__img устанавливает ширину для изображения в 100 пикселей.
+.nav__close устанавливает стили для значка "закрыть", включая размер, позицию, курсор и шрифт.
+.nav__list определяет способ отображения элементов списка в виде колонки,
+ с выравниванием элементов по центру и расстоянием между элементами в 1.5 рем.
+.nav__link устанавливает стили для ссылок в меню,
+ включая преобразование текста в верхний регистр, вес шрифта и время перехода.
+*/
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    width: 100%;
+    background: var(--container-color);
+    top: -150%;
+    left: 0;
+    padding: 3.5rem 0;
+    transition: 0.4s;
+    z-index: var(--z-fixed);
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+}
+
+.nav__img {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav__close {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  cursor: pointer;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  font-weight: var(--font-black);
+  transition: 0.4s;
+}
+/*Первое правило «.nav__link:hover» устанавливает цвет
+ элемента с классом «nav__link» равным значению пользовательской переменной 
+ CSS «--text-color», когда указатель мыши находится над элементом.
+
+Второе правило «.show-menu» устанавливает свойство
+ «top» в 0 для элемента с классом «show-menu».
+
+Третье правило «.scroll-header» устанавливает 
+цвет фона элемента с классом «scroll-header» в значение пользовательской переменной CSS «--container-color».
+
+Четвертое правило «.active-link» устанавливает 
+для свойства position значение «relative» для элемента с классом «active-link».
+
+Пятое правило '.active-link::before' создает псевдоэлемент перед элементом с классом 'active-link'.
+Он устанавливает для свойства содержимого пустую строку, для свойства position значение «absolute»,
+для свойства «bottom» значение «-0,75rem», для свойства «left» — «45%», для свойств ширины и высоты — 
+5 пикселей, для цвета фона — значение пользовательского CSS. переменная '--title-color' 
+и свойство border-radius на 50%. 
+Этот псевдоэлемент создает небольшую круглую форму в нижней части элемента «активная ссылка».*/
+.nav__link:hover {
+  color: var(--text-color);
+}
+
+.show-menu {
+  top: 0;
+}
+
+.scroll-header {
+  background: var(--container-color);
+}
+
+.active-link {
+  position: relative;
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 45%;
+  width: 5px;
+  height: 5px;
+  background-color: var(--title-color);
+  border-radius: 50%;
+}
+/*Первое правило '.home__content' устанавливает для свойства row-gap значение 1rem для элемента с классом 'home__content'.
+
+Второе правило «.home__group» устанавливает для свойства display значение «grid» для элемента 
+с классом home__group, свойство position — «относительное», а свойство padding-top — значение 2rem.
+
+Третье правило «.home__img» устанавливает для свойства «height» значение 250px,
+а для свойства «justify-self» значение «center» для элемента с классом «home__img».
+
+Четвертое правило '.home__indicator' создает круглую форму шириной 8 пикселей,
+высотой 8 пикселей, цветом фона пользовательской переменной CSS '--title-color', радиусом границы 50%,
+позицией ' absolute», верхнее значение 7rem и правое значение 2rem для элемента с классом «home__indicator».
+
+Пятое правило '.home__indicator::after' создает псевдоэлемент после элемента с классом 'home__indicator'.
+Он устанавливает для свойства содержимого пустую строку, для свойства position значение «absolute»,
+для ширины — 1 пиксель, для высоты — 48 пикселей, для цвета фона —
+значение пользовательской переменной CSS «—title-color», для верхнего значения — -3rem и правильное значение до 45%. Это создает вертикальную линию после круглой формы, созданной правилом «.home__indicator».
+
+Шестое правило «.home__details-img» устанавливает для свойства «position» значение «absolute», 
+а для свойства «right» значение 0,5rem для элемента с классом «home__details-img».*/
+.home__content {
+  row-gap: 1rem;
+}
+
+.home__group {
+  display: grid;
+  position: relative;
+  padding-top: 2rem;
+}
+
+.home__img {
+  height: 250px;
+  justify-self: center;
+}
+
+.home__indicator {
+  width: 8px;
+  height: 8px;
+  background-color: var(--title-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 7rem;
+  right: 2rem;
+}
+
+.home__indicator::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 48px;
+  background-color: var(--title-color);
+  top: -3rem;
+  right: 45%;
+}
+
+.home__details-img {
+  position: absolute;
+  right: 0.5rem;
+}
+/*Первое правило «.home__details-title, .home__details-subtitle» устанавливает для свойства «display» значение «block», для свойства «font-size» значение пользовательской
+ переменной CSS «--small-font-size» и свойство 'text-align' на 'right'
+  для элементов с классом 'home__details-title' или 'home__details-subtitle'.
+
+Второе правило '.home__subtitle' устанавливает для свойства 'font-size' 
+значение пользовательской переменной CSS '--h3-font-size', 
+для свойства 'text-transform' значение 'uppercase' и 'margin-bottom'.
+свойство на значение пользовательской переменной CSS '--mb-1' для элемента с классом 'home__subtitle'.
+
+Третье правило '.home__title' устанавливает для свойства 'font-size' значение пользовательской переменной CSS '--biggest-font-size',
+а для свойства 'font-weight' значение пользовательской переменной CSS '-- font-black»,
+свойство «line-height» на 109%, 
+а свойство «margin-bottom» на значение пользовательской переменной CSS «--mb-1» для элемента с классом «home__title».
+
+Четвертое правило «.home__description» устанавливает 
+для свойства «margin-bottom» значение пользовательской переменной CSS «--mb-1» для элемента с классом «home__description».
+
+Пятое правило «.home__buttons» устанавливает для свойства «display» значение «flex», 
+а для свойства «justify-content» значение «space-between» для элемента с классом «home__buttons». 
+Это создает гибкий контейнер с равным пространством между его дочерними элементами.*/
+.home__details-title,
+.home__details-subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  text-align: right;
+}
+
+.home__subtitle {
+  font-size: var(--h3-font-size);
+  text-transform: uppercase;
+  margin-bottom: var(--mb-1);
+}
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-black);
+  line-height: 109%;
+  margin-bottom: var(--mb-1);
+}
+
+.home__description {
+  margin-bottom: var(--mb-1);
+}
+
+.home__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+/*Первое правило «.swiper-pagination» устанавливает для свойства «position» значение «initial»,
+а для свойства «margin-top» значение пользовательской переменной CSS «--mb-1» 
+для элемента с классом «swiper-». нумерация страниц».
+
+Второе правило «.swiper-pagination-bullet» устанавливает для свойства «width» значение 5 пикселей,
+для свойства «height» значение 5 пикселей, для свойства «background-color» значение пользовательской 
+переменной CSS «--title-color» и свойство opacity равно 1 для элемента с классом swiper-pagination-bullet.
+
+Третье правило «.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet»
+устанавливает свойство «margin» равным «0 0,5rem» для элементов с классами «swiper-pagination-horizontal»,
+«swiper -pagination-bullet' и 'swiper-pagination-bullet'.
+
+Четвертое правило «.swiper-pagination-bullet-active» устанавливает свойство «width» на 1,5 rem, 
+свойство «height» на 5px и свойство «border-radius» на 0,5 rem для элемента с классом «swiper-pagination- 
+пулеактивный».
+
+Эти правила определяют стиль разбивки на страницы для ползунка или карусели,
+устанавливая стили для маркеров нумерации страниц и активного маркера.*/
+.swiper-pagination {
+  position: initial;
+  margin-top: var(--mb-1);
+}
+
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  background-color: var(--title-color);
+  opacity: 1;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 0.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  width: 1.5rem;
+  height: 5px;
+  border-radius: 0.5rem;
+}
+/*Класс .button устанавливает стиль по умолчанию для кнопки,
+ включая цвет фона, цвет текста, отступы, радиус границы, 
+ толщину шрифта и эффект перехода. Класс .button:hover устанавливает стиль при наведении на кнопку.
+
+Класс .button__icon определяет размер шрифта для значка внутри кнопки.
+
+Класс .button--ghost создает прозрачную кнопку с рамкой.
+Класс .button--ghost:hover устанавливает стиль при наведении курсора на кнопку-призрак.
+
+Класс .button--link устанавливает цвет кнопки ссылки.
+
+Класс .button--flex задает тип отображения inline-flex и выравнивает содержимое кнопки по вертикали 
+с промежутком между содержимым.*/
+.button {
+  display: inline-block;
+  background-color: rgb(34, 218, 95);
+  color: var(--title-color);
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(13, 107, 49);
+}
+
+.button__icon {
+  font-size: 1.25rem;
+}
+
+.button--ghost {
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 3rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.button--ghost:hover {
+  background: none;
+}
+
+.button--link {
+  color: var(--title-color);
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+/*Для класса .category__container свойство grid-template-columns настроено 
+на повторение 2 столбцов, каждый из которых составляет 1 часть (1fr) доступного пространства,
+ с промежутком в 1 остаток между строками и 2 остатка между столбцами.
+В классе .category__data для свойства text-align установлено значение center, 
+которое выравнивает текстовое содержимое внутри элемента по центру.
+Класс .category__img устанавливает ширину изображения равной 
+120 пикселям и имеет свойство margin-bottom, равное 0,75 рем. 
+Свойство перехода со значением 0,3 с создает эффект плавной анимации при наведении курсора на изображение.
+Класс .category__title имеет свойство margin-bottom, равное 0,25 rem.
+При наведении курсора на класс .category__data класс .category__img
+ внутри него трансформируется со свойством translateY, равным -0,5 rem.
+Аналогичным образом определяются стили для классов .about__container, 
+.about__data, .about__description и .about__img.*/
+.category__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+}
+
+.category__data {
+  text-align: center;
+}
+
+.category__img {
+  width: 120px;
+  margin-bottom: var(--mb-0-75);
+  transition: 0.3s;
+}
+
+.category__title {
+  margin-bottom: var(--mb-0-25);
+}
+
+.category__data:hover .category__img {
+  transform: translateY(-0.5rem);
+}
+/*Класс «.about__container» назначается элементу контейнера для раздела about 
+с интервалом между строками 2rem. Класс «.about__data» применяется к элементу 
+в разделе about и центрирует его текст содержимого. Класс «.about__description» 
+назначается элементу описания с нижним отступом 2 рем. Класс «.about__img» применяется 
+к изображению в разделе about, шириной 200 пикселей и центрированным по горизонтали.
+
+Класс «.trick__container» назначается элементу контейнера для раздела трюков с сеткой из
+двух столбцов и промежутком в 1,5 бэр. Класс «.trick__content» применяется к контейнеру
+контента в разделе трюков с белым цветом фона, радиусом границы 1 рем, отступами и текстом 
+по центру. Класс «.trick__img» применяется к изображению в разделе трюков шириной 
+90 пикселей и имеет эффект перехода 0,3 секунды. Классы «.trick__subtitle» и «.trick__price»
+применяются к элементам в разделе трюков и отображают их содержимое в виде блоков.*/
+.about__container {
+  row-gap: 2rem;
+}
+
+.about__data {
+  text-align: center;
+}
+
+.about__description {
+  margin-bottom: var(--mb-2);
+}
+
+.about__img {
+  width: 200px;
+  justify-self: center;
+}
+
+.trick__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.trick__content {
+  position: relative;
+  background: var(--container-color);
+  border-radius: 1rem;
+  padding: 1.5rem 0 1rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.trick__img {
+  width: 90px;
+  transition: 0.3s;
+}
+
+.trick__subtitle,
+.trick__price {
+  display: block;
+}
+/*
+.trick__subtitle - это стиль для подзаголовка, устанавливающий шрифт небольшого 
+размера и небольшой отступ снизу.
+
+.trick__title и .trick__price - это стили для заголовка и цены, в которых устанавливается цвет, 
+шрифт и размер шрифта.
+
+.trick__button - это стиль для кнопки, в котором устанавливается ее внешний вид, расположение и 
+закругление углов.
+
+.trick__icon - это стиль для иконки, который устанавливает размер и цвет шрифта.
+
+.trick__content:hover .trick__img - это стиль, который задает эффект перехода при наведении курсора на 
+изображение.
+
+.trick__content:hover .trick__button - это сти
+*/
+.trick__subtitle {
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.trick__title,
+.trick__price {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+}
+
+.trick__button {
+  display: inline-flex;
+  padding: 0.5rem;
+  border-radius: 0.25rem 0.25rem 0.75rem 0.25rem;
+  position: absolute;
+  right: -3rem;
+  bottom: 0;
+}
+
+.trick__icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.trick__content:hover .trick__img {
+  transform: translateY(-0.5rem);
+}
+
+.trick__content:hover .trick__button {
+  right: 0;
+}
+
+.discount__container {
+  background: var(--container-color);
+  border-radius: 1rem;
+  padding: 2.5rem 0 1.5rem;
+  row-gap: 0.75rem;
+}
+
+.discount__data {
+  text-align: center;
+}
+
+.discount__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+}
+/*
+Класс .discount__data определяет выравнивание текста для контейнера.
+Класс .discount__title определяет размер шрифта и поля для заголовка.
+Класс .discount__img определяет ширину изображения и выравнивает его по центру.
+Класс .new__container добавляет к контейнеру верхний отступ.
+Класс .new__img определяет ширину изображения, задает нижнее поле и 
+добавляет эффект перехода при наведении курсора на изображение.
+*/
+.discount__img {
+  width: 200px;
+  justify-self: center;
+}
+
+.new__container {
+  padding-top: 1rem;
+}
+
+.new__img {
+  width: 120px;
+  margin-bottom: var(--mb-0-5);
+  transition: 0.3s;
+}
+
+/*
+.new__content - устанавливает стиль для области с контентом, такие как фоновый цвет, размер, отступы, границы и позиционирование.
+.new__tag - устанавливает стиль для метки, которая помещена в верхнем левом углу области с контентом, такие как цвет фона, цвет текста, размер шрифта, отступы и границы.
+.new__title - устанавливает стиль для заголовка, такие как размер шрифта и вес шрифта.
+.new__subtitle - устанавливает стиль для подзаголовка, такие как размер шрифта.
+.new__prices - устанавливает стиль для блока с ценой, такие как выравнивание элементов и расстояние между ними.
+.new__price - устанавливает стиль для цены, такие как вес шрифта и цвет текста.
+.new__content:hover .new__button нацеливается на элемент .new__button при наведении курсора на элемент .new__content. Когда это происходит, для свойства right устанавливается значение 0, которое перемещает кнопку вправо.
+.new__content — это контейнер для информации о продукте, 
+.new__button — это кнопка призыва к действию для покупки продукта.
+*/
+
+.new__content {
+  position: relative;
+  background: var(--container-color);
+  width: 242px;
+  padding: 2rem 0 1.5rem 0;
+  border-radius: 0.75rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.new__tag {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.new__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.new__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.new__prices {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.new__price {
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.new__discount {
+  color: var(--first-color);
+  font-size: var(--smaller-font-size);
+  text-decoration: line-through;
+  font-weight: var(--font-medium);
+}
+
+.new__button {
+  display: inline-flex;
+  padding: 0.5rem;
+  border-radius: 0.25rem 0.25rem 0.75rem 0.25rem;
+  position: absolute;
+  bottom: 0;
+  right: -3rem;
+}
+
+.new__icon {
+  font-size: 1.25rem;
+}
+
+.new__content:hover .new__img {
+  transform: translateY(-0.5rem);
+}
+
+/*
+Элемент .new__content с эффектом наведения на элемент .new__button внутри него.
+Элемент .newsletter__description с выравниванием текста по центру и нижним полем var(--mb-1-5).
+Элемент .newsletter__form с цветом фона var(--container-color), отступом 1rem и отображением flex с параметром justify-content, установленным на space-between, и радиусом границы 0,75rem.
+Элемент .newsletter__input с шириной 70%, отступом 0,5rem, цветом фона без значения и цветом текста var(--title-color). Цвет текста-заполнителя установлен на var(--text-color).
+Элемент .footer с относительным расположением и скрытым переполнением.
+Элементы .footer__img-one и .footer__img-two с абсолютным позиционированием и переходом в 0,3 с.
+Элемент .footer__img-one с шириной 100px, верхним 6rem и правым 2rem.
+Элемент .footer__img-two шириной 150 пикселей, размером 4rem снизу и 4rem справа.
+Элементы .footer__img-one:hover и .footer__img-two:hover с трансформацией translateY, равной -0,5rem.
+Элемент .footer__container с межстрочным интервалом 2rem.
+Элемент .footer__logo, который отображается как гибкий, с элементами, выровненными по центру, между столбцами 0,5rem, нижним полем var(--mb-1), начертанием шрифта var(--font-medium) и цвет текста var(--title-color).
+Элемент .footer__logo-img шириной 20 пикселей.
+Элемент .footer__description с нижним полем var(--mb-2-5).
+Элемент .footer__social, который отображается как гибкий и имеет зазор между столбцами 0,75 rem.
+Элемент .footer__social-link, который отображается как inline-flex, имеет цвет фона var(--container-color), отступы 0,25rem, радиус границы 0,25rem, цвет текста var(--title- цвет), размер шрифта 1rem.
+*/
+
+
+.new__content:hover .new__button {
+  right: 0;
+}
+
+.newsletter__description {
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+}
+
+.newsletter__form {
+  background: var(--container-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+}
+
+.newsletter__input {
+  width: 70%;
+  padding: 0 0.5rem;
+  background: none;
+  color: var(--title-color);
+}
+
+.newsletter__input::placeholder {
+  color: var(--text-color);
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__img-one,
+.footer__img-two {
+  position: absolute;
+  transition: 0.3s;
+}
+
+.footer__img-one {
+  width: 100px;
+  top: 6rem;
+  right: -2rem;
+}
+
+.footer__img-two {
+  width: 150px;
+  bottom: 4rem;
+  right: 4rem;
+}
+
+.footer__img-one:hover,
+.footer__img-two:hover {
+  transform: translateY(-0.5rem);
+}
+
+.footer__container {
+  row-gap: 2rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.footer__logo-img {
+  width: 20px;
+}
+
+.footer__description {
+  margin-bottom: var(--mb-2-5);
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 0.75rem;
+}
+
+.footer__social-link {
+  display: inline-flex;
+  background: var(--container-color);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  color: var(--title-color);
+  font-size: 1rem;
+}
+/*
+.footer__social-link:hover - это стиль, который задает цвет фона для элемента при наведении на него мыши.
+.footer__title - стиль для заголовка в футере.
+.footer__links - стиль для блока со ссылками.
+.footer__link - стиль для каждой отдельной ссылки.
+.footer__copy - стиль для копирайта.
+.scrollup - стиль для элемента "прокрутить вверх".
+.scrollup__icon - стиль для иконки внутри элемента "прокрутить вверх".
+.show-scroll - стиль, который меняет позицию элемента "прокрутить вверх".
+::-webkit-scrollbar - стиль для скроллбара в веб-странице.
+::-webkit-scrollbar-thumb - стиль для того, чтобы задать цвет элемента ползунка в скроллбаре.
+*/
+.footer__social-link:hover {
+  background: var(--body-color);
+}
+
+.footer__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.footer__links {
+  display: grid;
+  row-gap: 0.35rem;
+}
+
+.footer__link {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--title-color);
+}
+
+.footer__copy {
+  display: block;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  margin-top: 4.5rem;
+}
+
+.scrollup {
+  position: fixed;
+  background: var(--container-color);
+  right: 1rem;
+  bottom: -20%;
+  display: inline-flex;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  z-index: var(--z-tooltip);
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+.scrollup__icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.scrollup:hover {
+  background: var(--container-color);
+  opacity: 1;
+}
+
+.show-scroll {
+  bottom: 3rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background: #413e3e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272525;
+  border-radius: 0.5rem;
+}
+/*
+Первый media-запрос @media screen and (max-width: 320px)
+ переопределяет стили для экранов шириной 320 пикселей или менее.
+ В этом запросе устанавливается отступ слева и справа для элемента с классом .container
+ , а также новые значения высоты и стилей для элемента .home__img и .home__buttons. Также,
+  для элементов с классами .category__container и .trick__container устанавливается ширина столбцов и выравнивание элементов по центру.
+
+Второй media-запрос @media screen and (min-width: 576px) переопределяет стили для экранов шириной 576 пикселей или более. В этом запросе устанавливается ширина столбцов для элемента с классом
+ .about__container и выравнивание элементов по центру. 
+*/
+@media screen and (max-width: 320px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .home__img {
+    height: 200px;
+  }
+  .home__buttons {
+    flex-direction: column;
+    width: max-content;
+    row-gap: 1rem;
+  }
+
+  .category__container,
+  .trick__container {
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .about__container {
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+  }
+
+  .newsletter__container {
+    display: grid;
+    grid-template-columns: 0.7fr;
+    justify-content: center;
+  }
+  .newsletter__description {
+    padding: 0 3rem;
+  }
+}
+/*
+Удаление поля по умолчанию из элемента body и добавление отступов к элементам класса раздела
+Скрытие элементов .nav__img, .nav__close и .nav__toggle и настройка .nav__list для отображения в формате строки с промежутком 3rem
+Преобразование текста .nav__link и удаление веса шрифта
+Настройка макета элемента .home__content путем добавления 8rem отступов и установки столбцов шаблона сетки на 2 столбца с промежутком 4rem
+Установка высоты .home__img на 300 пикселей и настройка верхней границы элемента .swiper-pagination
+Настройка макета элемента .category__container для отображения 3 столбцов шириной 200 пикселей и центрированным содержимым
+Настройка макета элемента .about__container для отображения 2 столбцов с шаблоном сетки 1fr и выравниванием элементов по центру
+Установка выравнивания текста элементов .about__title и .about__data на начальное и установка ширины .about__img на 250 пикселей
+Настройка макета элемента .trick__container для отображения 3 столбцов шириной 200 пикселей и выравниванием содержимого по центру.
+Настройка макета элемента .discount__container для отображения 2 столбцов с шириной max-content, центрированным содержимым, промежутком между столбцами 3rem и радиусом границы 3rem
+Установка ширины элемента .discount__img на 350 пикселей и настройка порядка на -1
+Настройка макета элемента .newsletter__container для отображения одного столбца шириной 0,5fr
+Настройка макета элемента .footer__container для отображения 4 столбцов с одинаковой шириной и центрированным содержимым с промежутком между столбцами 1rem
+Установка положения элемента .footer__img-two на 15% слева внизу страницы и удаление свойства right.
+Эти изменения гарантируют, что макет страницы оптимизирован для больших размеров экрана и обеспечивает лучшее взаимодействие с пользователем.
+*/
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding: 7rem 0 2rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__img,
+  .nav__close,
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .nav__link {
+    text-transform: initial;
+    font-weight: initial;
+  }
+
+  .home__content {
+    padding: 8rem 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  .home__img {
+    height: 300px;
+  }
+  .swiper-pagination {
+    margin-top: var(--mb-2);
+  }
+
+  .category__container {
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+  }
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .about__title,
+  .about__data {
+    text-align: initial;
+  }
+  .about__img {
+    width: 250px;
+  }
+
+  .trick__container {
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .discount__container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    padding: 3rem 0;
+    border-radius: 3rem;
+  }
+  .discount__img {
+    width: 350px;
+    order: -1;
+  }
+  .discount__data {
+    padding-right: 6rem;
+  }
+
+  .newsletter__container {
+    grid-template-columns: 0.5fr;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    column-gap: 1rem;
+  }
+  .footer__img-two {
+    right: initial;
+    bottom: 0;
+    left: 15%;
+  }
+}
+
+/*Для экранов с разрешением от 992px до 1199px:
+
+Для класса .container устанавливается автоматическое выравнивание по горизонтали.
+Для класса .section__title устанавливается размер шрифта равный h1-font-size.
+Для классов .home__content, .home__img, .home__indicator, .home__details-img, .home__title, .home__description и другие устанавливаются различные размеры и положения.
+Для классов .category__container, .about__container, .trick__container, .discount__container, .new__content и другие устанавливаются различные размеры и отступы.
+Для экранов с разрешением не менее 1200px:
+
+Для класса .home__img устанавливается высота 420px.
+Для классов .footer__img-one и .footer__img-two устанавливаются различные размеры и положения.*/
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: 3rem;
+  }
+
+  .home__content {
+    padding-top: 9rem;
+    gap: 3rem;
+  }
+  .home__group {
+    padding-top: 0;
+  }
+  .home__img {
+    height: 400px;
+    transform: translateY(-3rem);
+  }
+  .home__indicator {
+    top: initial;
+    right: initial;
+    bottom: 15%;
+    left: 45%;
+  }
+  .home__indicator::after {
+    top: 0;
+    height: 75px;
+  }
+  .home__details-img {
+    bottom: 0;
+    right: 58%;
+  }
+  .home__title {
+    margin-bottom: var(--mb-1-5);
+  }
+  .home__description {
+    margin-bottom: var(--mb-2-5);
+    padding-right: 2rem;
+  }
+
+  .category__container {
+    column-gap: 8rem;
+  }
+  .category__img {
+    width: 200px;
+  }
+
+  .about__container {
+    column-gap: 7rem;
+  }
+  .about__img {
+    width: 350px;
+  }
+  .about__description {
+    padding-right: 2rem;
+  }
+
+  .trick__container {
+    gap: 3.5rem;
+  }
+  .trick__content {
+    border-radius: 1.5rem;
+  }
+  .trick__img {
+    width: 110px;
+  }
+  .trick__title {
+    font-size: var(--h3-font-size);
+  }
+
+  .discount__container {
+    column-gap: 7rem;
+  }
+
+  .new__content {
+    width: 310px;
+    border-radius: 1rem;
+    padding: 2rem 0;
+  }
+  .new__img {
+    width: 150px;
+  }
+  .new__img,
+  .new__subtitle {
+    margin-bottom: var(--mb-1);
+  }
+  .new__title {
+    font-size: var(--h3-font-size);
+  }
+
+  .footer__copy {
+    margin-top: 6rem;
+  }
+}
+
+/*
+Это CSS-стиль, который определяет стили для элементов сайта при ширине экрана 1200 пикселей или более.
+.home__img - это стиль для изображения на главной странице сайта. Его высота будет 420 пикселей.
+.swiper-pagination - это стиль для пагинации карусели. Он имеет отступ сверху в 2.5 единицах измерения.
+.footer__img-one - это стиль для первого изображения в подвале сайта. Его ширина будет равна 120 пикселям.
+.footer__img-two - это стиль для второго изображения в подвале сайта. Его ширина будет равна 180 пикселей, 
+а оно будет смещено вниз на 30% и влево на 3%.
+*/
+
+@media screen and (min-width: 1200px) {
+  .home__img {
+    height: 420px;
+  }
+  .swiper-pagination {
+    margin-top: var(--mb-2-5);
+  }
+  .footer__img-one {
+    width: 120px;
+  }
+  .footer__img-two {
+    width: 180px;
+    top: 30%;
+    left: -3%;
+  }
+}

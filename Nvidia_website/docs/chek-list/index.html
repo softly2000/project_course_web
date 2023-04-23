@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Чек лист</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />-->
+    
+
+  </head>
+  <body>
+    <header>
+      <h1>Чек-лист</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Требования к сайту</h2>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement1" />
+              Быстрая загрузка страниц
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement2" />
+              Хорошая навигация
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement3" />
+              Читабельный шрифт
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement4" />
+              Проверка орфографии и грамматики
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement5" />
+              Совместимость с браузерами
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement6" />
+              Наличие контактной информации
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement7" />
+              Хорошие фото и изображения товаров
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement8" />
+              Хорошая видимость и читаемость на мобильных устройствах
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement9" />
+              Полнота и актуальность информации
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="requirement10" />
+              Чистый дизайн
+            </label>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Форма замечаний</h2>
+        <form id="feedback-form">
+          <div>
+            <label for="comments">Замечания:</label>
+            <textarea id="comments" name="comments"></textarea>
+          </div>
+          <div>
+            <label for="attachment"class="upload-btn" ></label>
+            <input type="file" id="attachment" name="attachment" />
+          </div>
+          <div>
+            <button type="submit">Отправить</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <div class="modal">
+      <div class="modal-content">
+        <i class="fas fa-check-circle"></i>
+        <h3>Форма успешно отправлена!</h3>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
